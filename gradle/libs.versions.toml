@@ -1,0 +1,39 @@
+[versions]
+androidGradlePlugin = "8.2.0"
+androidTools = "31.2.0"
+androidxActivity = "1.8.0"
+androidxAppCompat = "1.6.1"
+androidxComposeBom = "2023.10.01"
+androidxComposeCompiler = "1.5.1"
+androidxCore = "1.12.0"
+androidxLifecycle = "2.6.2"
+kotlin = "1.9.0"
+ksp = "1.9.21-1.0.16"
+
+[libraries]
+androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "androidxActivity" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "androidxAppCompat" }
+androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "androidxComposeBom" }
+androidx-compose-ui = { module = "androidx.compose.ui:ui" }
+androidx-compose-ui-graphics = { module = "androidx.compose.ui:ui-graphics" }
+androidx-compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview" }
+androidx-compose-material3 = { module = "androidx.compose.material3:material3" }
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "androidxCore" }
+androidx-lifecycle-runtimeCompose = { group = "androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "androidxLifecycle" }
+
+# Dependencies of the included build-logic
+android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "androidGradlePlugin" }
+android-tools-common = { group = "com.android.tools", name = "common", version.ref = "androidTools" }
+kotlin-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
+ksp-gradlePlugin = { group = "com.google.devtools.ksp", name = "com.google.devtools.ksp.gradle.plugin", version.ref = "ksp" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+
+# Plugins defined by this project
+buildlogicex-android-application = { id = "buildlogicex.android.application", version = "unspecified" }
+buildlogicex-android-application-compose = { id = "buildlogicex.android.application.compose", version = "unspecified" }
+buildlogicex-android-library = { id = "buildlogicex.android.library", version = "unspecified" }
+buildlogicex-android-library-compose = { id = "buildlogicex.android.library.compose", version = "unspecified" }
